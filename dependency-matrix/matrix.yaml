@@ -1,7 +1,7 @@
 dependencies:
 - host: github.com
-  owner: highpeakdata
-  repo: hpdconnect
-  url: https://github.com/highpeakdata/hpdconnect.git
+  owner: Nexenta
+  repo: edgefs
+  url: https://github.com/Nexenta/edgefs.git
   version: ""
   versionURL: ""
