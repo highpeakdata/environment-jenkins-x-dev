@@ -1,35 +1,82 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-config.git
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: false
-  project: ""
+  azure: {}
+  clusterName: jenkins-x
+  devEnvApprovers:
+  - dyusupov
+  environmentGitOwner: highpeakdata
+  environmentGitPublic: true
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: cloudserver-250320
   provider: gke
-  zone: ""
-gitops: true
+  registry: gcr.io
+  zone: us-central1-f
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    cloud_dns_secret_name: external-dns-gcp-sa
+    domain: jx.highpeakdata.com
+    externalDNS: true
+    namespaceSubDomain: -jx.
+    tls:
+      email: support@highpeakdata.com
+      enabled: true
+      production: true
+  key: dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+gitops: true
 ingress:
-  domain: ""
-  externalDNS: false
+  cloud_dns_secret_name: external-dns-gcp-sa
+  domain: jx.highpeakdata.com
+  externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: support@highpeakdata.com
+    enabled: true
+    production: true
 kaniko: true
+repository: nexus
 secretStorage: local
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://highpeakdata-jenkins-logs
   reports:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://highpeakdata-jenkins-reports
   repository:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://highpeakdata-jenkins-repository
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
-  ref: "master"
+  ref: v1.0.298
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow

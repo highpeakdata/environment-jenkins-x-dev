@@ -1,0 +1,10 @@
+adminUser:
+  password: local:jenkins-x/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: edgefs.bot@gmail.com
+  token: local:jenkins-x/pipelineUser:token
+  username: edgefs-bot
+prow:
+  hmacToken: local:jenkins-x/prow:hmacToken
