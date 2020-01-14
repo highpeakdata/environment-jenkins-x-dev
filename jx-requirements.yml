@@ -56,7 +56,6 @@ ingress:
     email: support@highpeakdata.com
     enabled: true
     production: true
-kaniko: true
 repository: nexus
 secretStorage: local
 storage:
