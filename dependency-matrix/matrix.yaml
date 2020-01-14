@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: Nexenta
+  repo: edgefs
+  url: https://github.com/Nexenta/edgefs.git
+  version: ""
+  versionURL: ""

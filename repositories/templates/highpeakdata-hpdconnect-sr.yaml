@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: highpeakdata
+    provider: github
+    repository: hpdconnect
+  name: highpeakdata-hpdconnect
+spec:
+  description: Imported application for highpeakdata/hpdconnect
+  httpCloneURL: https://github.com/highpeakdata/hpdconnect.git
+  org: highpeakdata
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: hpdconnect
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/highpeakdata/hpdconnect.git
