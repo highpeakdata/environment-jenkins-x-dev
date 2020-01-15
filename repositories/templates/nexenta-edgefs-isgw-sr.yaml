@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: Nexenta
+    provider: github
+    repository: edgefs-isgw
+  name: nexenta-edgefs-isgw
+spec:
+  description: Imported application for Nexenta/edgefs-isgw
+  httpCloneURL: https://github.com/Nexenta/edgefs-isgw.git
+  org: Nexenta
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: edgefs-isgw
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/Nexenta/edgefs-isgw.git
