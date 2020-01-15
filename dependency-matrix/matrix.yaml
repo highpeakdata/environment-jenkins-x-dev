@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/Nexenta/edgefs.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: Nexenta
+  repo: edgefs-isgw
+  url: https://github.com/Nexenta/edgefs-isgw.git
+  version: ""
+  versionURL: ""
